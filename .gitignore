@@ -1,0 +1,21 @@
+# Секреты — НИКОГДА не коммитить
+.env
+
+# База и сгенерированные данные
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+
+# Системные
+.DS_Store
+Thumbs.db

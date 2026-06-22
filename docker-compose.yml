@@ -1,0 +1,21 @@
+# ScrapperAD — продакшн-запуск бота.
+#
+#   Старт/обновление:  docker compose up -d --build
+#   Логи:              docker compose logs -f
+#   Рестарт:           docker compose restart
+#   Стоп:              docker compose down
+#
+# Перед первым запуском: скопируй .env.example в .env и заполни токены.
+
+services:
+  bot:
+    build: .
+    image: scrapperad
+    container_name: scrapperad
+    restart: unless-stopped
+    # Токены и настройки берутся из .env (в образ НЕ зашиваются)
+    env_file: .env
+    # База (SQLite), кэш и состояние Apify-ключей живут на хосте —
+    # переживают пересборку образа и обновления.
+    volumes:
+      - ./data:/app/data

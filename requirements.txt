@@ -1,0 +1,21 @@
+# ScrapperAD — зависимости (версии закреплены для воспроизводимой сборки Docker)
+# Установка: pip install -r requirements.txt
+
+# Telegram-бот
+aiogram==3.28.2
+
+# HTTP-клиент (скачивание картинок креативов)
+aiohttp==3.13.5
+
+# Переменные окружения из .env
+python-dotenv==1.2.2
+
+# Apify API — слежка за рекламой (Facebook Ad Library)
+apify-client==3.0.2
+
+# PDF-отчёты (тариф Pro) + обработка картинок для них
+fpdf2==2.8.7
+pillow==12.2.0
+
+# AI-креативы (Фаза 2) — раскомментируй когда будешь подключать
+# anthropic
